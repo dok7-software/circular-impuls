@@ -1,0 +1,10 @@
+export { font } from "@/core/typography/fonts";
+export { heroType } from "@/core/typography/hero";
+export { aboutType } from "@/core/typography/about";
+export { areasType } from "@/core/typography/areas";
+export { methodologyType } from "@/core/typography/methodology";
+export { pillarsType } from "@/core/typography/pillars";
+export { impactType } from "@/core/typography/impact";
+export { ctaType } from "@/core/typography/cta";
+export { footerType } from "@/core/typography/footer";
+export { sharedType } from "@/core/typography/shared";

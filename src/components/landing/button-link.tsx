@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { sharedType } from "@/core/typography";
 import { cn } from "@/lib/utils";
 
 type ButtonLinkProps = {
@@ -18,7 +19,8 @@ export function ButtonLink({
     <Link
       href={href}
       className={cn(
-        "inline-flex items-center justify-center rounded-full px-6 py-3.5 text-base font-bold transition-opacity hover:opacity-90",
+        sharedType.button,
+        "inline-flex items-center justify-center rounded-full px-6 py-3.5 transition-opacity hover:opacity-90",
         variant === "primary" && "bg-brand-green text-[#06140c]",
         variant === "secondary" && "bg-brand-green px-7 py-4 text-[#06140c]",
         variant === "outline-light" &&

@@ -15,7 +15,6 @@ export function SectionLabel({
   return (
     <p
       className={cn(
-        "font-mono text-sm tracking-[0.2em] uppercase",
         variant === "dark" && "text-brand-green",
         variant === "cream" && "text-brand-green-dark",
         className,

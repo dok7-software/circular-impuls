@@ -1,5 +1,7 @@
 import type { Dictionary, PillarIcon } from "@/core/i18n/types";
+import { pillarsType } from "@/core/typography";
 import { Container } from "@/components/landing/container";
+import { cn } from "@/lib/utils";
 
 function PillarIconSvg({ type }: { type: PillarIcon }) {
   const props = {
@@ -61,10 +63,13 @@ export function PillarsSection({ content }: PillarsSectionProps) {
       className="flex min-h-screen items-center bg-[#efe9dc] text-[#16202a]"
     >
       <Container className="w-full py-24 lg:py-30">
-        <h2 className="mb-16 text-center font-heading text-3xl font-bold tracking-tight sm:text-4xl lg:text-[46px]">
+        <h2 className={cn(pillarsType.title, "mb-6 text-center")}>
           {content.titlePrefix}{" "}
           <span className="text-brand-green-dark">{content.titleHighlight}</span>
         </h2>
+        <p className={cn(pillarsType.subtitle, "mx-auto mb-16 max-w-3xl text-[#3a2d52]")}>
+          {content.subtitle}
+        </p>
 
         <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
           {content.items.map((pillar) => (
@@ -80,13 +85,17 @@ export function PillarsSection({ content }: PillarsSectionProps) {
                 <PillarIconSvg type={pillar.icon} />
               </div>
               <h3
-                className={`mb-3.5 font-heading text-lg font-bold sm:text-[21px] ${
-                  pillar.accent === "green" ? "text-brand-green-dark" : "text-[#3a2d52]"
-                }`}
+                className={cn(
+                  pillarsType.itemTitle,
+                  "mb-3.5",
+                  pillar.accent === "green" ? "text-brand-green-dark" : "text-[#3a2d52]",
+                )}
               >
                 {pillar.title}
               </h3>
-              <p className="text-[15.5px] text-[#5a6470]">{pillar.description}</p>
+              <p className={cn(pillarsType.itemDescription, "text-[#5a6470]")}>
+                {pillar.description}
+              </p>
             </article>
           ))}
         </div>

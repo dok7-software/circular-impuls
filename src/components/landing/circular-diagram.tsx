@@ -1,3 +1,5 @@
+import { aboutType } from "@/core/typography";
+
 const CX = 160;
 const CY = 160;
 const OUTER_R = 122;
@@ -44,7 +46,7 @@ export function CircularDiagram() {
         x={CX}
         y="154"
         textAnchor="middle"
-        className="fill-white font-mono text-xl font-bold tracking-[0.22em]"
+        className={`fill-white ${aboutType.diagram}`}
       >
         CIRCULAR
       </text>
@@ -52,7 +54,7 @@ export function CircularDiagram() {
         x={CX}
         y="184"
         textAnchor="middle"
-        className="fill-brand-green font-mono text-xl font-bold tracking-[0.22em]"
+        className={`fill-brand-green ${aboutType.diagram}`}
       >
         IMPULS
       </text>

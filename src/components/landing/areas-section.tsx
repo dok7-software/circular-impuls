@@ -1,6 +1,8 @@
 import type { AreaIcon, Dictionary } from "@/core/i18n/types";
+import { areasType } from "@/core/typography";
 import { Container } from "@/components/landing/container";
 import { SectionLabel } from "@/components/landing/section-label";
+import { cn } from "@/lib/utils";
 
 function AreaIconSvg({ type }: { type: AreaIcon }) {
   const props = {
@@ -65,13 +67,17 @@ export function AreasSection({ content }: AreasSectionProps) {
       <div className="pointer-events-none absolute -top-28 -right-28 h-120 w-120 rounded-full bg-[radial-gradient(circle,rgba(56,224,123,.10),transparent_70%)]" />
 
       <Container className="relative py-24 lg:py-30">
-        <SectionLabel className="mb-7">{content.label}</SectionLabel>
-        <h2 className="mb-5 font-heading text-3xl leading-tight font-bold tracking-tight text-white sm:text-4xl lg:text-[46px]">
-          {content.titleLine1}
-          <br />
-          {content.titleLine2}
-        </h2>
-        <p className="mb-16 max-w-2xl text-lg text-[#97a0ab]">{content.description}</p>
+        <div className="mb-16 text-center">
+          <SectionLabel className={cn(areasType.label, "mb-7")}>{content.label}</SectionLabel>
+          <h2 className={cn(areasType.title, "mb-5 text-white")}>
+            {content.titleLine1}
+            <br />
+            {content.titleLine2}
+          </h2>
+          <p className={cn(areasType.description, "mx-auto max-w-2xl text-[#97a0ab]")}>
+            {content.description}
+          </p>
+        </div>
 
         <div className="grid gap-7 lg:grid-cols-3">
           {content.items.map((area) => (
@@ -82,19 +88,21 @@ export function AreasSection({ content }: AreasSectionProps) {
               <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-brand-green/10 text-brand-green">
                 <AreaIconSvg type={area.icon} />
               </div>
-              <h3 className="mb-1.5 font-heading text-xl font-semibold text-white sm:text-[23px]">
+              <h3 className={cn(areasType.itemTitle, "mb-1.5 text-white")}>
                 {area.title}
               </h3>
-              <p className="mb-6 text-sm font-semibold text-brand-green">{area.subtitle}</p>
+              <p className={cn(areasType.itemSubtitle, "mb-6 text-brand-green")}>
+                {area.subtitle}
+              </p>
               <ul className="flex flex-col gap-4">
                 {area.bullets.map((item) => (
                   <li
                     key={item.sector}
-                    className="flex gap-3 text-[15.5px] text-[#9aa3ae]"
+                    className={cn(areasType.itemBullet, "flex gap-3 text-[#9aa3ae]")}
                   >
                     <span className="text-brand-green">●</span>
                     <span>
-                      <strong className="font-semibold text-[#dde2e8]">
+                      <strong className={cn(areasType.itemSector, "text-[#dde2e8]")}>
                         {item.sector}:
                       </strong>{" "}
                       {item.text}

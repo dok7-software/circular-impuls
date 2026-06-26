@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { Locale } from "@/core/i18n/config";
 import type { Dictionary } from "@/core/i18n/types";
+import { sharedType } from "@/core/typography";
 import { ButtonLink } from "@/components/landing/button-link";
 import { Container } from "@/components/landing/container";
 import { LocaleSwitcher } from "@/components/i18n/locale-switcher";
@@ -41,13 +42,13 @@ export function LandingHeader({ locale, brand, nav }: LandingHeaderProps) {
         <nav className="flex h-24 items-center justify-between">
           <Link
             href={`/${locale}`}
-            className="font-mono text-xl font-bold tracking-[0.18em] text-white"
+            className={cn(sharedType.brand, "text-white")}
           >
             {brand}
           </Link>
           <div className="flex items-center gap-8">
             <LocaleSwitcher locale={locale} />
-            <ButtonLink href="#contacte" className="px-6 py-3 text-sm">
+            <ButtonLink href="#contacte" className={cn(sharedType.buttonSm, "px-6 py-3")}>
               {nav.cta}
             </ButtonLink>
           </div>

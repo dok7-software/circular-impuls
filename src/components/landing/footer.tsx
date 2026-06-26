@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Dictionary } from "@/core/i18n/types";
+import { footerType } from "@/core/typography";
 import { Container } from "@/components/landing/container";
+import { cn } from "@/lib/utils";
 
 type LandingFooterProps = {
   brand: string;
@@ -20,7 +22,12 @@ function SocialIcon({ children }: { children: React.ReactNode }) {
 
 function LogoPlaceholder({ label }: { label: string }) {
   return (
-    <div className="flex h-10 items-center justify-center rounded-lg border border-dashed border-white/14 font-mono text-[11px] text-[#6b7480]">
+    <div
+      className={cn(
+        footerType.placeholder,
+        "flex h-10 items-center justify-center rounded-lg border border-dashed border-white/14 text-[#6b7480]",
+      )}
+    >
       {label}
     </div>
   );
@@ -28,13 +35,11 @@ function LogoPlaceholder({ label }: { label: string }) {
 
 export function LandingFooter({ brand, content }: LandingFooterProps) {
   return (
-    <footer className="border-t border-white/6 bg-[#080b0f]">
+    <footer className={cn(footerType.body, "border-t border-white/6 bg-[#080b0f]")}>
       <Container className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
         <div>
-          <p className="mb-4 font-mono text-base font-bold tracking-[0.16em] text-white">
-            {brand}
-          </p>
-          <p className="mb-5 max-w-60 text-sm text-[#7e8893]">{content.description}</p>
+          <p className={cn(footerType.brand, "mb-4 text-white")}>{brand}</p>
+          <p className="mb-5 max-w-60 text-[#7e8893]">{content.description}</p>
           <div className="flex gap-2.5">
             <SocialIcon>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -56,12 +61,16 @@ export function LandingFooter({ brand, content }: LandingFooterProps) {
         </div>
 
         <div>
-          <p className="mb-5 font-mono text-[11px] tracking-[0.18em] text-[#5d6772] uppercase">
+          <p className={cn(footerType.columnTitle, "mb-5 text-[#5d6772]")}>
             {content.linksTitle}
           </p>
-          <div className="flex flex-col gap-3 text-sm">
+          <div className="flex flex-col gap-3">
             {content.links.map((link) => (
-              <Link key={link.href + link.label} href={link.href} className="text-[#9aa3ae] hover:text-white">
+              <Link
+                key={link.href + link.label}
+                href={link.href}
+                className={cn(footerType.link, "text-[#9aa3ae] hover:text-white")}
+              >
                 {link.label}
               </Link>
             ))}
@@ -69,12 +78,16 @@ export function LandingFooter({ brand, content }: LandingFooterProps) {
         </div>
 
         <div>
-          <p className="mb-5 font-mono text-[11px] tracking-[0.18em] text-[#5d6772] uppercase">
+          <p className={cn(footerType.columnTitle, "mb-5 text-[#5d6772]")}>
             {content.contactTitle}
           </p>
-          <div className="flex flex-col gap-3 text-sm">
+          <div className="flex flex-col gap-3">
             {content.contact.map((link) => (
-              <Link key={link.href + link.label} href={link.href} className="text-[#9aa3ae] hover:text-white">
+              <Link
+                key={link.href + link.label}
+                href={link.href}
+                className={cn(footerType.link, "text-[#9aa3ae] hover:text-white")}
+              >
                 {link.label}
               </Link>
             ))}
@@ -82,7 +95,7 @@ export function LandingFooter({ brand, content }: LandingFooterProps) {
         </div>
 
         <div>
-          <p className="mb-5 font-mono text-[11px] tracking-[0.18em] text-[#5d6772] uppercase">
+          <p className={cn(footerType.columnTitle, "mb-5 text-[#5d6772]")}>
             {content.supportTitle}
           </p>
           <div className="flex flex-col gap-3">
@@ -94,7 +107,7 @@ export function LandingFooter({ brand, content }: LandingFooterProps) {
       </Container>
 
       <Container className="pb-8">
-        <p className="border-t border-white/6 pt-6 text-center text-sm text-[#5d6772]">
+        <p className={cn(footerType.copyright, "border-t border-white/6 pt-6 text-center text-[#5d6772]")}>
           © {new Date().getFullYear()} {content.copyright}
         </p>
       </Container>

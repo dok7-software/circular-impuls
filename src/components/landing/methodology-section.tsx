@@ -1,5 +1,7 @@
 import type { Dictionary } from "@/core/i18n/types";
+import { methodologyType } from "@/core/typography";
 import { Container } from "@/components/landing/container";
+import { cn } from "@/lib/utils";
 
 type MethodologySectionProps = {
   content: Dictionary["methodology"];
@@ -12,18 +14,23 @@ export function MethodologySection({ content }: MethodologySectionProps) {
       className="flex min-h-screen items-center bg-brand-cream text-[#16202a]"
     >
       <Container className="w-full py-24 lg:py-30">
-        <h2 className="mb-16 font-heading text-3xl font-bold tracking-tight sm:text-4xl lg:text-[46px]">
+        <h2 className={cn(methodologyType.title, "mb-6")}>
           {content.titlePrefix}{" "}
           <span className="text-brand-green-dark">{content.titleHighlight}</span>
         </h2>
+        <p className={cn(methodologyType.subtitle, "mb-16 text-[#3a2d52]")}>
+          {content.subtitle}
+        </p>
 
         <div className="grid gap-12 lg:grid-cols-3 lg:gap-14">
           {content.steps.map((step, index) => (
             <div key={step.number}>
               <p
-                className={`mb-6 font-heading text-6xl leading-none font-bold lg:text-7xl ${
-                  index === 0 ? "text-brand-green-dark" : "text-[#c3b9a3]"
-                }`}
+                className={cn(
+                  methodologyType.stepNumber,
+                  "mb-6",
+                  index === 0 ? "text-brand-green-dark" : "text-[#c3b9a3]",
+                )}
               >
                 {step.number}
               </p>
@@ -36,10 +43,12 @@ export function MethodologySection({ content }: MethodologySectionProps) {
                       : `linear-gradient(90deg, #1fa85c ${step.progress}%, #d8cfbb ${step.progress}%)`,
                 }}
               />
-              <h3 className="mb-3.5 font-heading text-xl font-semibold sm:text-[25px]">
+              <h3 className={cn(methodologyType.stepTitle, "mb-3.5")}>
                 {step.title}
               </h3>
-              <p className="text-[17px] text-[#5a6470]">{step.description}</p>
+              <p className={cn(methodologyType.stepDescription, "text-[#5a6470]")}>
+                {step.description}
+              </p>
             </div>
           ))}
         </div>

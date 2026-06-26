@@ -52,6 +52,7 @@ export type Dictionary = {
   methodology: {
     titlePrefix: string;
     titleHighlight: string;
+    subtitle: string;
     steps: {
       number: string;
       title: string;
@@ -62,6 +63,7 @@ export type Dictionary = {
   pillars: {
     titlePrefix: string;
     titleHighlight: string;
+    subtitle: string;
     items: {
       icon: PillarIcon;
       accent: PillarAccent;
