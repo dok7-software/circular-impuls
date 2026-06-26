@@ -31,7 +31,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <MethodologySection content={dict.methodology} />
       <PillarsSection content={dict.pillars} />
       <ImpactSection content={dict.impact} />
-      <CtaSection content={dict.cta} />
+      <CtaSection locale={locale} content={dict.cta} />
       <LandingFooter brand={dict.brand} content={dict.footer} />
     </>
   );

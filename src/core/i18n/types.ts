@@ -81,7 +81,19 @@ export type Dictionary = {
     titleLine1: string;
     titleHighlight: string;
     description: string;
-    button: string;
+    form: {
+      firstName: string;
+      lastName: string;
+      email: string;
+      phone: string;
+      project: string;
+      message: string;
+      consent: string;
+      submit: string;
+      submitting: string;
+      success: string;
+      error: string;
+    };
   };
   footer: {
     description: string;

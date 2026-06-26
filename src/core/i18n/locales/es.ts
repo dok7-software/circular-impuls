@@ -194,7 +194,20 @@ const es = {
     titleHighlight: "tu proyecto?",
     description:
       "Minimiza el riesgo. Acelera tu ejecución. Las plazas para la edición de septiembre – diciembre 2026 están estrictamente limitadas para garantizar la máxima calidad y el acompañamiento personalizado de cada proyecto.",
-    button: "Presenta tu candidatura al Programa PRIMER 2026 →",
+    form: {
+      firstName: "Nombre",
+      lastName: "Apellidos",
+      email: "Correo electrónico",
+      phone: "Teléfono",
+      project: "Empresa o proyecto",
+      message: "Motivo de la inscripción",
+      consent:
+        "Acepto que mis datos se traten para gestionar mi inscripción al programa, de acuerdo con la política de privacidad.",
+      submit: "Presenta tu candidatura al Programa PRIMER 2026 →",
+      submitting: "Enviando...",
+      success: "Candidatura enviada. Nos pondremos en contacto pronto.",
+      error: "No se ha podido enviar. Inténtalo de nuevo más tarde.",
+    },
   },
   footer: {
     description:

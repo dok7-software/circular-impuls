@@ -37,7 +37,7 @@ export function LandingHeader({ locale, brand, nav }: LandingHeaderProps) {
           : "border-transparent bg-transparent",
       )}
     >
-      <Container>
+      <Container variant="tight">
         <nav className="flex h-24 items-center justify-between">
           <Link
             href={`/${locale}`}
