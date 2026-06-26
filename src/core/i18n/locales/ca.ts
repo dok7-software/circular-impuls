@@ -194,7 +194,20 @@ const ca = {
     titleHighlight: "el teu projecte?",
     description:
       "Minimitza el risc. Accelera la teva execució. Les places per a l'edició de setembre – desembre 2026 estan estrictament limitades per garantir la màxima qualitat i l'acompanyament personalitzat de cada projecte.",
-    button: "Presenta la teva candidatura al Programa PRIMER 2026 →",
+    form: {
+      firstName: "Nom",
+      lastName: "Cognoms",
+      email: "Correu electrònic",
+      phone: "Telèfon",
+      project: "Empresa o projecte",
+      message: "Motiu de la inscripció",
+      consent:
+        "Accepto que les meves dades es tractin per gestionar la meva inscripció al programa, d'acord amb la política de privacitat.",
+      submit: "Presenta la teva candidatura al Programa PRIMER 2026 →",
+      submitting: "Enviant...",
+      success: "Candidatura enviada. Ens posarem en contacte aviat.",
+      error: "No s'ha pogut enviar. Torna-ho a provar més tard.",
+    },
   },
   footer: {
     description:
