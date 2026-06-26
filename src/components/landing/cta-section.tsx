@@ -1,8 +1,10 @@
 import type { Locale } from "@/core/i18n/config";
 import type { Dictionary } from "@/core/i18n/types";
+import { ctaType } from "@/core/typography";
 import { Container } from "@/components/landing/container";
 import { InscriptionForm } from "@/components/landing/inscription-form";
 import { SectionLabel } from "@/components/landing/section-label";
+import { cn } from "@/lib/utils";
 
 type CtaSectionProps = {
   locale: Locale;
@@ -17,13 +19,13 @@ export function CtaSection({ locale, content }: CtaSectionProps) {
     >
       <Container className="py-24 lg:py-30">
         <div className="text-center">
-          <SectionLabel className="mb-7 tracking-[0.22em]">{content.label}</SectionLabel>
-          <h2 className="mb-8 font-heading text-4xl leading-tight font-extrabold tracking-tight text-white sm:text-5xl lg:text-[62px]">
+          <SectionLabel className={cn(ctaType.label, "mb-7")}>{content.label}</SectionLabel>
+          <h2 className={cn(ctaType.title, "mb-8 text-white")}>
             {content.titleLine1}
             <br />
             <span className="text-brand-green">{content.titleHighlight}</span>
           </h2>
-          <p className="mx-auto mb-10 max-w-2xl text-base leading-relaxed text-[#aeb6c0] sm:text-lg">
+          <p className={cn(ctaType.description, "mx-auto mb-10 max-w-2xl text-[#aeb6c0]")}>
             {content.description}
           </p>
         </div>

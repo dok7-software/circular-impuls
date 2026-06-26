@@ -120,6 +120,8 @@ const ca = {
   methodology: {
     titlePrefix: "La nostra",
     titleHighlight: "metodologia",
+    subtitle:
+      "De la idea al model validat, amb un full de ruta clar per créixer.",
     steps: [
       {
         number: "01",
@@ -147,6 +149,8 @@ const ca = {
   pillars: {
     titlePrefix: "Pilars del",
     titleHighlight: "Programa",
+    subtitle:
+      "Zero fricció amb el teu negoci. Format adaptat a tu i al teu estil de vida",
     items: [
       {
         icon: "clock",

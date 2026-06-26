@@ -120,6 +120,8 @@ const es = {
   methodology: {
     titlePrefix: "Nuestra",
     titleHighlight: "metodología",
+    subtitle:
+      "De la idea al modelo validado, con una hoja de ruta clara para crecer.",
     steps: [
       {
         number: "01",
@@ -147,6 +149,8 @@ const es = {
   pillars: {
     titlePrefix: "Pilares del",
     titleHighlight: "Programa",
+    subtitle:
+      "Cero fricción con tu negocio. Formato adaptado a ti y a tu estilo de vida",
     items: [
       {
         icon: "clock",

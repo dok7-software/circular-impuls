@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import type { Locale } from "@/core/i18n/config";
 import type { Dictionary } from "@/core/i18n/types";
+import { ctaType } from "@/core/typography";
 import { cn } from "@/lib/utils";
 
 type InscriptionFormProps = {
@@ -12,11 +13,13 @@ type InscriptionFormProps = {
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
-const inputClassName =
-  "w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-[15px] text-white placeholder:text-[#7e8893] outline-none transition-colors focus:border-brand-green/60 focus:ring-1 focus:ring-brand-green/40";
-
 export function InscriptionForm({ locale, form }: InscriptionFormProps) {
   const [status, setStatus] = useState<FormStatus>("idle");
+
+  const inputClassName = cn(
+    ctaType.formInput,
+    "w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-[#7e8893] outline-none transition-colors focus:border-brand-green/60 focus:ring-1 focus:ring-brand-green/40",
+  );
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -61,7 +64,7 @@ export function InscriptionForm({ locale, form }: InscriptionFormProps) {
     >
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block sm:col-span-1">
-          <span className="mb-1.5 block text-sm font-medium text-[#c4ccd5]">
+          <span className={cn(ctaType.formLabel, "mb-1.5 block text-[#c4ccd5]")}>
             {form.firstName} *
           </span>
           <input
@@ -74,7 +77,7 @@ export function InscriptionForm({ locale, form }: InscriptionFormProps) {
         </label>
 
         <label className="block sm:col-span-1">
-          <span className="mb-1.5 block text-sm font-medium text-[#c4ccd5]">
+          <span className={cn(ctaType.formLabel, "mb-1.5 block text-[#c4ccd5]")}>
             {form.lastName}
           </span>
           <input
@@ -86,7 +89,7 @@ export function InscriptionForm({ locale, form }: InscriptionFormProps) {
         </label>
 
         <label className="block sm:col-span-1">
-          <span className="mb-1.5 block text-sm font-medium text-[#c4ccd5]">
+          <span className={cn(ctaType.formLabel, "mb-1.5 block text-[#c4ccd5]")}>
             {form.email} *
           </span>
           <input
@@ -99,7 +102,7 @@ export function InscriptionForm({ locale, form }: InscriptionFormProps) {
         </label>
 
         <label className="block sm:col-span-1">
-          <span className="mb-1.5 block text-sm font-medium text-[#c4ccd5]">
+          <span className={cn(ctaType.formLabel, "mb-1.5 block text-[#c4ccd5]")}>
             {form.phone} *
           </span>
           <input
@@ -112,7 +115,7 @@ export function InscriptionForm({ locale, form }: InscriptionFormProps) {
         </label>
 
         <label className="block sm:col-span-2">
-          <span className="mb-1.5 block text-sm font-medium text-[#c4ccd5]">
+          <span className={cn(ctaType.formLabel, "mb-1.5 block text-[#c4ccd5]")}>
             {form.project} *
           </span>
           <input
@@ -124,7 +127,7 @@ export function InscriptionForm({ locale, form }: InscriptionFormProps) {
         </label>
 
         <label className="block sm:col-span-2">
-          <span className="mb-1.5 block text-sm font-medium text-[#c4ccd5]">
+          <span className={cn(ctaType.formLabel, "mb-1.5 block text-[#c4ccd5]")}>
             {form.message} *
           </span>
           <textarea
@@ -148,25 +151,28 @@ export function InscriptionForm({ locale, form }: InscriptionFormProps) {
           required
           className="mt-1 h-4 w-4 shrink-0 accent-brand-green"
         />
-        <span className="text-sm leading-snug text-[#aeb6c0]">{form.consent}</span>
+        <span className={cn(ctaType.formConsent, "text-[#aeb6c0]")}>{form.consent}</span>
       </label>
 
       <button
         type="submit"
         disabled={status === "submitting" || status === "success"}
-        className="mt-6 w-full rounded-full bg-brand-green px-10 py-4 text-base font-bold text-[#06140c] transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className={cn(
+          ctaType.formSubmit,
+          "mt-6 w-full rounded-full bg-brand-green px-10 py-4 text-[#06140c] transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto",
+        )}
       >
         {status === "submitting" ? form.submitting : form.submit}
       </button>
 
       {status === "success" && (
-        <p className="mt-4 text-sm font-medium text-brand-green" role="status">
+        <p className={cn(ctaType.formMessage, "mt-4 text-brand-green")} role="status">
           {form.success}
         </p>
       )}
 
       {status === "error" && (
-        <p className="mt-4 text-sm font-medium text-red-400" role="alert">
+        <p className={cn(ctaType.formMessage, "mt-4 text-red-400")} role="alert">
           {form.error}
         </p>
       )}
