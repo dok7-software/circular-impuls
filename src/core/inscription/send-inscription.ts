@@ -53,7 +53,7 @@ function buildNotificationHtml(data: InscriptionInput) {
     { label: "Telèfon", value: data.phone },
     { label: "Ubicació", value: data.location },
     { label: "Té empresa", value: data.hasCompany === "yes" ? "Sí" : "No" },
-    { label: "Sector", value: data.sector },
+    { label: "Sector", value: data.sector ?? "—" },
     { label: "Idioma", value: data.locale.toUpperCase() },
   ];
 
@@ -137,7 +137,7 @@ export async function sendInscription(data: InscriptionInput) {
       PHONE: data.phone,
       LOCATION: data.location,
       HAS_COMPANY: data.hasCompany,
-      SECTOR: data.sector,
+      SECTOR: data.sector ?? "",
       LOCALE: data.locale,
     },
     updateEnabled: true,

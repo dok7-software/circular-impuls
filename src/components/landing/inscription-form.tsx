@@ -145,12 +145,11 @@ export function InscriptionForm({ locale, form }: InscriptionFormProps) {
 
         <label className="block sm:col-span-1">
           <span className={cn(ctaType.formLabel, "mb-1.5 block text-[#c4ccd5]")}>
-            {form.sector} *
+            {form.sector}
           </span>
           <input
             type="text"
             name="sector"
-            required
             className={inputClassName}
           />
         </label>
