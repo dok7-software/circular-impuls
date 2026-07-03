@@ -39,7 +39,12 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
     <>
       <SetHtmlLang locale={locale as Locale} />
       <div className="relative bg-[#0b0f14] text-[#e8ebef] antialiased">
-        <LandingHeader locale={locale as Locale} brand={dict.brand} nav={dict.nav} />
+        <LandingHeader
+          locale={locale as Locale}
+          brand={dict.brand}
+          pimecLogo={dict.hero.pimecLogo}
+          nav={dict.nav}
+        />
         {children}
       </div>
     </>

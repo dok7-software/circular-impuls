@@ -15,7 +15,7 @@ type HeroSectionProps = {
 
 export function HeroSection({ content }: HeroSectionProps) {
   return (
-    <section className="relative flex flex-col overflow-x-hidden bg-[#0b0f14] sm:overflow-hidden">
+    <section className="relative flex flex-col overflow-x-hidden bg-[#0b0f14] sm:h-svh sm:overflow-hidden">
       <Image
         src="/images/hero.png"
         alt={content.imageAlt}
@@ -28,10 +28,10 @@ export function HeroSection({ content }: HeroSectionProps) {
 
       <HeroSectionMobile content={content} />
 
-      <div className="relative hidden flex-col sm:flex">
+      <div className="relative hidden min-h-0 flex-1 flex-col sm:flex">
         <Container
           variant="tight"
-          className="relative z-10 flex flex-col py-8 pt-24 lg:py-10 lg:pt-28"
+          className="relative z-10 flex shrink-0 flex-col py-6 pt-20 lg:py-8 lg:pt-24"
         >
           <div className={cn(heroContentClassName, "shrink-0")}>
             <div className="ml-12 inline-flex w-fit items-center gap-2.5 rounded-full border border-brand-green/55 bg-[rgba(8,11,15,.35)] px-5 py-2.5">
@@ -53,7 +53,7 @@ export function HeroSection({ content }: HeroSectionProps) {
               {content.subtitle}
             </p>
 
-            <p className={cn(heroType.subtitle, "mb-6 max-w-2xl text-[#dfe4ea] lg:mb-8")}>
+            <p className={cn(heroType.subtitle, "mb-4 max-w-2xl text-[#dfe4ea] lg:mb-5")}>
               {content.subtitleLine2}
             </p>
 
@@ -63,8 +63,19 @@ export function HeroSection({ content }: HeroSectionProps) {
           </div>
         </Container>
 
-        <Container variant="tight" className="shrink-0 pb-6 lg:pb-8">
-          <div className="mb-4 flex flex-wrap items-start justify-end gap-6 lg:mb-6 lg:gap-10">
+        <Container variant="tight" className="mt-auto shrink-0 pb-4 lg:pb-6">
+          <div className="mb-3 flex flex-wrap items-end justify-end gap-5 lg:mb-4 lg:gap-8">
+            <div className="text-left">
+              <p className={cn(heroType.programBy, "mb-2.5 text-[#c4ccd5]")}>
+                {content.impulsadoBy}
+              </p>
+              <HeroPartnerLogo
+                src={content.pimecLogo.src}
+                alt={content.pimecLogo.alt}
+                className="h-[52px] max-w-[240px]"
+              />
+            </div>
+
             <div className="text-left">
               <p className={cn(heroType.fundedBy, "mb-2.5 text-[#c4ccd5]")}>
                 {content.fundedBy}
@@ -89,27 +100,19 @@ export function HeroSection({ content }: HeroSectionProps) {
               >
                 {content.fundingNote}
               </p>
-            </div>
-
-            <div className="text-left">
-              <p className={cn(heroType.programBy, "mb-2.5 text-[#c4ccd5]")}>
-                {content.programBy}
-              </p>
-              <HeroPartnerLogo
-                src={content.pimecLogo.src}
-                alt={content.pimecLogo.alt}
-                className="h-9"
-              />
-              <div className="mt-4 flex flex-col items-start gap-4">
+              <div className="mt-3 flex flex-wrap items-center justify-end gap-2.5">
+                <p className={cn(heroType.programBy, "text-[#c4ccd5]")}>
+                  {content.programBy}
+                </p>
                 <HeroPartnerLogo
                   src={content.programaPrimerLogo.src}
                   alt={content.programaPrimerLogo.alt}
-                  className="h-[45px] max-w-[240px]"
+                  className="h-5 max-w-[120px]"
                 />
                 <HeroPartnerLogo
                   src={content.xeLogo.src}
                   alt={content.xeLogo.alt}
-                  className="h-[45px] max-w-[240px]"
+                  className="h-5 max-w-[120px]"
                 />
               </div>
             </div>
@@ -118,7 +121,7 @@ export function HeroSection({ content }: HeroSectionProps) {
           <div
             className={cn(
               heroType.stat,
-              "flex flex-wrap gap-8 border-t border-white/12 pt-5 text-[#dfe4ea] lg:gap-12",
+              "flex flex-wrap gap-6 border-t border-white/12 pt-4 text-[#dfe4ea] lg:gap-10",
             )}
           >
             {content.stats.map((stat) => (

@@ -40,6 +40,15 @@ export function HeroSectionMobile({ content }: HeroSectionMobileProps) {
 
       <Container variant="tight" className="shrink-0 space-y-4 pb-5 pt-6">
         <div>
+          <p className={cn(heroType.programBy, "mb-2 text-[#c4ccd5]")}>{content.impulsadoBy}</p>
+          <HeroPartnerLogo
+            src={content.pimecLogo.src}
+            alt={content.pimecLogo.alt}
+            className="h-9 max-w-44"
+          />
+        </div>
+
+        <div className="border-t border-white/12 pt-4">
           <p className={cn(heroType.fundedBy, "mb-2 text-[#c4ccd5]")}>{content.fundedBy}</p>
           <div className="flex flex-col items-start gap-2">
             <HeroPartnerLogo
@@ -61,25 +70,17 @@ export function HeroSectionMobile({ content }: HeroSectionMobileProps) {
           >
             {content.fundingNote}
           </p>
-        </div>
-
-        <div className="border-t border-white/12 pt-4">
-          <p className={cn(heroType.programBy, "mb-2 text-[#c4ccd5]")}>{content.programBy}</p>
-          <div className="flex flex-col items-start gap-2.5">
-            <HeroPartnerLogo
-              src={content.pimecLogo.src}
-              alt={content.pimecLogo.alt}
-              className="h-7 max-w-36"
-            />
+          <div className="mt-3 flex flex-wrap items-center gap-2.5">
+            <p className={cn(heroType.programBy, "w-full text-[#c4ccd5]")}>{content.programBy}</p>
             <HeroPartnerLogo
               src={content.programaPrimerLogo.src}
               alt={content.programaPrimerLogo.alt}
-              className="h-8 max-w-36"
+              className="h-4 max-w-24"
             />
             <HeroPartnerLogo
               src={content.xeLogo.src}
               alt={content.xeLogo.alt}
-              className="h-8 max-w-36"
+              className="h-4 max-w-24"
             />
           </div>
         </div>
