@@ -12,7 +12,7 @@ const ca = {
   },
   hero: {
     imageAlt: "Persones caminant per la ciutat",
-    badge: "Places obertes · Inici 14 de setembre de 2026",
+    badge: "Convocatòria oberta fins al 26 de juliol · Inici 15 de setembre",
     titleLine1: "El teu model empresarial més sostenible:",
     titleArticle: "",
     titleHighlight: "Energia, Recursos i Circularitat",
@@ -51,7 +51,7 @@ const ca = {
       { value: "80h", label: "formació" },
       { value: "100h", label: "mentoria experta" },
       { value: "Pilots", label: "reals" },
-      { value: "Inici", label: "14 setembre 2026" },
+      { value: "Inici", label: "15 setembre 2026" },
     ],
   },
   about: {
@@ -208,7 +208,7 @@ const ca = {
     titleLine1: "Places",
     titleHighlight: "limitades.",
     description:
-      "Comença el 14 de setembre de 2026 amb sessió inaugural presencial de 10 a 12h.",
+      "Convocatòria oberta fins al 26 de juliol. Inici del programa el 15 de setembre de 2026 amb sessió inaugural presencial de 10 a 12h.",
     form: {
       name: "Nom",
       email: "Correu electrònic",

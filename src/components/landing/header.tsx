@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { Locale } from "@/core/i18n/config";
@@ -13,10 +14,11 @@ import { cn } from "@/lib/utils";
 type LandingHeaderProps = {
   locale: Locale;
   brand: string;
+  pimecLogo: Dictionary["hero"]["pimecLogo"];
   nav: Dictionary["nav"];
 };
 
-export function LandingHeader({ locale, brand, nav }: LandingHeaderProps) {
+export function LandingHeader({ locale, brand, pimecLogo, nav }: LandingHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -29,11 +31,24 @@ export function LandingHeader({ locale, brand, nav }: LandingHeaderProps) {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0b0f14]/95 backdrop-blur-md">
         <Container variant="tight">
           <nav className="flex h-14 items-center justify-between sm:h-20">
-            <Link
-              href={`/${locale}`}
-              className={cn(sharedType.brand, "whitespace-nowrap text-[13px] tracking-[0.08em] text-white sm:text-xl sm:tracking-[0.18em]")}
-            >
-              {brand}
+            <Link href={`/${locale}`} className="flex shrink-0 items-center gap-3 sm:gap-4">
+              <Image
+                src={pimecLogo.src}
+                alt={pimecLogo.alt}
+                width={180}
+                height={48}
+                priority
+                className="h-7 w-auto object-contain sm:h-9"
+              />
+              <span className="h-6 w-px shrink-0 bg-brand-green sm:h-8" aria-hidden />
+              <span
+                className={cn(
+                  sharedType.brand,
+                  "whitespace-nowrap text-[13px] tracking-[0.08em] text-white sm:text-xl sm:tracking-[0.18em]",
+                )}
+              >
+                {brand}
+              </span>
             </Link>
 
             {/* Desktop nav */}

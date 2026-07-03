@@ -12,7 +12,7 @@ const es = {
   },
   hero: {
     imageAlt: "Personas caminando por la ciudad",
-    badge: "Plazas abiertas · Inicio 14 de septiembre de 2026",
+    badge: "Convocatoria abierta hasta el 26 de julio · Inicio 15 de septiembre",
     titleLine1: "Tu modelo de negocio,",
     titleArticle: "",
     titleHighlight: "más sostenible y más rentable",
@@ -51,7 +51,7 @@ const es = {
       { value: "80h", label: "formación" },
       { value: "100h", label: "mentoría experta" },
       { value: "Pilotos", label: "reales" },
-      { value: "Inicio", label: "14 septiembre 2026" },
+      { value: "Inicio", label: "15 septiembre 2026" },
     ],
   },
   about: {
@@ -208,7 +208,7 @@ const es = {
     titleLine1: "Plazas",
     titleHighlight: "limitadas.",
     description:
-      "Empieza el 14 de septiembre de 2026 con sesión inaugural presencial de 10 a 12h.",
+      "Convocatoria abierta hasta el 26 de julio. Inicio del programa el 15 de septiembre de 2026 con sesión inaugural presencial de 10 a 12h.",
     form: {
       name: "Nombre",
       email: "Correo electrónico",
