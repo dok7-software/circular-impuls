@@ -40,6 +40,7 @@ export function LandingHeader({ locale, brand, pimecLogo, nav }: LandingHeaderPr
                 priority
                 className="h-7 w-auto object-contain sm:h-9"
               />
+              <span className="h-6 w-px shrink-0 bg-brand-green sm:h-8" aria-hidden />
               <span
                 className={cn(
                   sharedType.brand,

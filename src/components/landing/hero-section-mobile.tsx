@@ -3,13 +3,15 @@ import { heroType } from "@/core/typography";
 import { ButtonLink } from "@/components/landing/button-link";
 import { Container } from "@/components/landing/container";
 import { HeroPartnerLogo } from "@/components/landing/hero-partner-logo";
+import { HeroCollaborators } from "@/components/landing/hero-collaborators";
 import { cn } from "@/lib/utils";
 
 type HeroSectionMobileProps = {
   content: Dictionary["hero"];
+  collaborators: Dictionary["collaborators"];
 };
 
-export function HeroSectionMobile({ content }: HeroSectionMobileProps) {
+export function HeroSectionMobile({ content, collaborators }: HeroSectionMobileProps) {
   return (
     <div className="relative z-10 flex flex-col sm:hidden">
       <Container variant="tight" className="flex flex-col pt-16 pb-4">
@@ -39,63 +41,52 @@ export function HeroSectionMobile({ content }: HeroSectionMobileProps) {
       </Container>
 
       <Container variant="tight" className="shrink-0 space-y-4 pb-5 pt-6">
-        <div>
-          <p className={cn(heroType.programBy, "mb-2 text-[#c4ccd5]")}>{content.impulsadoBy}</p>
-          <HeroPartnerLogo
-            src={content.pimecLogo.src}
-            alt={content.pimecLogo.alt}
-            className="h-9 max-w-44"
-          />
+        <div className="border-t border-white/12 pt-4">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-6">
+            <div className="min-w-0 flex-1">
+              <p
+                className={cn(
+                  heroType.fundingNote,
+                  "mb-2 max-w-sm whitespace-pre-line text-[#9aa3ae]",
+                )}
+              >
+                {content.fundingNote}
+              </p>
+              <p className={cn(heroType.fundedBy, "mb-2 text-[#c4ccd5]")}>{content.fundedBy}</p>
+              <div className="flex flex-col items-start gap-2">
+                <HeroPartnerLogo
+                  src={content.fseLogo.src}
+                  alt={content.fseLogo.alt}
+                  className="h-[39px] max-w-[207px]"
+                />
+                <HeroPartnerLogo
+                  src={content.generalitatLogo.src}
+                  alt={content.generalitatLogo.alt}
+                  className="h-[33px] max-w-[154px]"
+                />
+              </div>
+            </div>
+
+            <div className="shrink-0">
+              <p className={cn(heroType.programBy, "mb-2 text-[#c4ccd5]")}>{content.programBy}</p>
+              <div className="flex flex-col items-start gap-2">
+                <HeroPartnerLogo
+                  src={content.programaPrimerLogo.src}
+                  alt={content.programaPrimerLogo.alt}
+                  className="h-7 max-w-28"
+                />
+                <HeroPartnerLogo
+                  src={content.xeLogo.src}
+                  alt={content.xeLogo.alt}
+                  className="h-7 max-w-28"
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="border-t border-white/12 pt-4">
-          <p className={cn(heroType.fundedBy, "mb-2 text-[#c4ccd5]")}>{content.fundedBy}</p>
-          <div className="flex flex-col items-start gap-2">
-            <HeroPartnerLogo
-              src={content.fseLogo.src}
-              alt={content.fseLogo.alt}
-              className="h-[39px] max-w-[207px]"
-            />
-            <HeroPartnerLogo
-              src={content.generalitatLogo.src}
-              alt={content.generalitatLogo.alt}
-              className="h-[33px] max-w-[154px]"
-            />
-          </div>
-          <p
-            className={cn(
-              heroType.fundingNote,
-              "mt-2 max-w-sm whitespace-pre-line text-[#9aa3ae]",
-            )}
-          >
-            {content.fundingNote}
-          </p>
-          <div className="mt-3 flex flex-wrap items-center gap-2.5">
-            <p className={cn(heroType.programBy, "w-full text-[#c4ccd5]")}>{content.programBy}</p>
-            <HeroPartnerLogo
-              src={content.programaPrimerLogo.src}
-              alt={content.programaPrimerLogo.alt}
-              className="h-4 max-w-24"
-            />
-            <HeroPartnerLogo
-              src={content.xeLogo.src}
-              alt={content.xeLogo.alt}
-              className="h-4 max-w-24"
-            />
-          </div>
-        </div>
-
-        <div
-          className={cn(
-            heroType.stat,
-            "grid grid-cols-2 gap-x-4 gap-y-2 border-t border-white/12 pt-4 text-[#dfe4ea]",
-          )}
-        >
-          {content.stats.map((stat) => (
-            <div key={stat.label}>
-              <span className="font-bold text-brand-green">{stat.value}</span> · {stat.label}
-            </div>
-          ))}
+          <HeroCollaborators content={collaborators} />
         </div>
       </Container>
     </div>

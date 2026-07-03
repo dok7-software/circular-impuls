@@ -3,7 +3,6 @@ import { isLocale } from "@/core/i18n/config";
 import { getDictionary } from "@/core/i18n/get-dictionary";
 import { AboutSection } from "@/components/landing/about-section";
 import { AreasSection } from "@/components/landing/areas-section";
-import { CollaboratorsSection } from "@/components/landing/collaborators-section";
 import { CtaSection } from "@/components/landing/cta-section";
 import { HeroSection } from "@/components/landing/hero-section";
 import { ImpactSection } from "@/components/landing/impact-section";
@@ -26,14 +25,13 @@ export default async function HomePage({ params }: HomePageProps) {
 
   return (
     <>
-      <HeroSection content={dict.hero} />
+      <HeroSection content={dict.hero} collaborators={dict.collaborators} />
       <AboutSection content={dict.about} />
       <AreasSection content={dict.areas} />
       <MethodologySection content={dict.methodology} />
       <PillarsSection content={dict.pillars} />
       <ImpactSection content={dict.impact} />
       <CtaSection locale={locale} content={dict.cta} />
-      <CollaboratorsSection content={dict.collaborators} />
       <LandingFooter brand={dict.brand} content={dict.footer} />
     </>
   );

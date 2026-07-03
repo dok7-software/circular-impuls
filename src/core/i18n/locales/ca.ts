@@ -34,7 +34,6 @@ const ca = {
     },
     fundingNote:
       "Aquesta actuació està impulsada i subvencionada pel Departament d'Empresa i Treball\ni cofinanciada pel Fons Social Europeu Plus",
-    impulsadoBy: "Impulsat per:",
     programBy: "Programa de:",
     pimecLogo: {
       src: "/images/logo-pimec.png",

@@ -27,7 +27,6 @@ export type Dictionary = {
     generalitatLogo: { src: string; alt: string };
     pimecLogo: { src: string; alt: string };
     fundingNote: string;
-    impulsadoBy: string;
     programBy: string;
     xeLogo: { src: string; alt: string };
     programaPrimerLogo: { src: string; alt: string };
