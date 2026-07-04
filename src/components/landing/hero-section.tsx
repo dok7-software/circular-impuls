@@ -17,7 +17,7 @@ type HeroSectionProps = {
 
 export function HeroSection({ content, collaborators }: HeroSectionProps) {
   return (
-    <section className="relative flex flex-col overflow-x-hidden bg-[#0b0f14] sm:h-svh sm:overflow-hidden">
+    <section className="relative flex flex-col overflow-x-hidden bg-[#0b0f14] sm:min-h-svh">
       <Image
         src="/images/hero.png"
         alt={content.imageAlt}
@@ -30,7 +30,7 @@ export function HeroSection({ content, collaborators }: HeroSectionProps) {
 
       <HeroSectionMobile content={content} collaborators={collaborators} />
 
-      <div className="relative hidden min-h-0 flex-1 flex-col sm:flex">
+      <div className="relative z-10 hidden min-h-svh flex-1 flex-col sm:flex">
         <Container
           variant="tight"
           className="relative z-10 flex shrink-0 flex-col py-6 pt-20 lg:py-8 lg:pt-24"
@@ -65,7 +65,7 @@ export function HeroSection({ content, collaborators }: HeroSectionProps) {
           </div>
         </Container>
 
-        <Container variant="tight" className="mt-auto shrink-0 pb-4 lg:pb-6">
+        <Container variant="tight" className="relative z-10 mt-auto shrink-0 pb-4 lg:pb-6">
           <div className="flex flex-wrap items-end justify-between gap-5 lg:gap-8">
             <HeroCollaborators content={collaborators} />
 

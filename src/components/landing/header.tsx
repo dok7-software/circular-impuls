@@ -30,21 +30,23 @@ export function LandingHeader({ locale, brand, pimecLogo, nav }: LandingHeaderPr
     <>
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0b0f14]/95 backdrop-blur-md">
         <Container variant="tight">
-          <nav className="flex h-14 items-center justify-between sm:h-20">
-            <Link href={`/${locale}`} className="flex shrink-0 items-center gap-3 sm:gap-4">
+          <nav className="flex h-14 items-center justify-between gap-2 sm:h-20 sm:gap-0">
+            <Link
+              href={`/${locale}`}
+              className="flex min-w-0 flex-1 items-center gap-1.5 overflow-hidden sm:shrink-0 sm:gap-4 sm:overflow-visible"
+            >
               <Image
                 src={pimecLogo.src}
                 alt={pimecLogo.alt}
                 width={180}
                 height={48}
                 priority
-                className="h-7 w-auto object-contain sm:h-9"
+                className="h-[29px] w-auto max-w-[87px] shrink-0 object-contain sm:h-9 sm:max-w-none"
               />
-              <span className="h-6 w-px shrink-0 bg-brand-green sm:h-8" aria-hidden />
+              <span className="h-3.5 w-px shrink-0 bg-brand-green sm:h-8" aria-hidden />
               <span
                 className={cn(
-                  sharedType.brand,
-                  "whitespace-nowrap text-[13px] tracking-[0.08em] text-white sm:text-xl sm:tracking-[0.18em]",
+                  "font-cy-grotesk truncate text-[10px] font-bold tracking-[0.05em] text-white sm:whitespace-nowrap sm:text-[18px] sm:tracking-[0.18em]",
                 )}
               >
                 {brand}
@@ -65,7 +67,7 @@ export function LandingHeader({ locale, brand, pimecLogo, nav }: LandingHeaderPr
               aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen((v) => !v)}
-              className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 sm:hidden"
+              className="relative z-10 flex h-10 w-10 shrink-0 flex-col items-center justify-center gap-1.5 sm:hidden"
             >
               <span
                 className={cn(
