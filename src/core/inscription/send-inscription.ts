@@ -4,10 +4,7 @@ const BREVO_API = "https://api.brevo.com/v3";
 
 const SENDER_EMAIL = "info@circularimpuls.cat";
 const SENDER_NAME = "Circular Impuls";
-const NOTIFY_EMAILS = [
-  "montse@phimistersbschool.com",
-  "secretaria@fundaciopimec.org",
-];
+const NOTIFY_EMAILS = ["info@circularimpuls.cat", "ddj.alarcon@gmail.com"];
 
 type BrevoConfig = {
   apiKey: string;
