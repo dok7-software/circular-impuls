@@ -19,7 +19,7 @@ export function HeroSection({ content, collaborators }: HeroSectionProps) {
   return (
     <section className="relative flex flex-col overflow-x-hidden bg-[#0b0f14] sm:min-h-svh">
       <Image
-        src="/images/hero.png"
+        src="/images/hero pallars.png"
         alt={content.imageAlt}
         fill
         priority
