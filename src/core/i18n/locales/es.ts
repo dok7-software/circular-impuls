@@ -13,7 +13,7 @@ const es = {
   hero: {
     imageAlt: "Personas caminando por la ciudad",
     badge: "INSCRIPCIONES POR ORDEN DE ENTRADA-PLAZAS LIMITADAS-INICIO 15 DE SEPTIEMBRE",
-    titleLine1: "Tu modelo empresarial más sostenible y de futuro:",
+    titleLine1: "Tu modelo empresarial sostenible de futuro",
     titleArticle: "",
     titleHighlight: "Energía, Recursos y Circularidad",
     titleLine2: "",
