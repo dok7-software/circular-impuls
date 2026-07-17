@@ -13,7 +13,7 @@ const ca = {
   hero: {
     imageAlt: "Persones caminant per la ciutat",
     badge: "INSCRIPCIONS PER ORDRE D'ENTRADA-PLACES LÍMITADES-INICI 15 DE SETEMBRE",
-    titleLine1: "El teu model empresarial més sostenible i de futur:",
+    titleLine1: "El teu model empresarial sostenible de futur",
     titleArticle: "",
     titleHighlight: "Energia, Recursos i Circularitat",
     titleLine2: "",
