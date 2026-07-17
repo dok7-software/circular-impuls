@@ -21,10 +21,10 @@ export function HeroSectionMobile({ content, collaborators }: HeroSectionMobileP
         </div>
 
         <h1 className={cn(heroType.title, "mt-4 mb-2 max-w-xl text-white")}>
-          {content.titleLine1}
+          <span className="whitespace-pre-line">{content.titleLine1}</span>
           <br />
           {content.titleArticle}
-          <span className="text-brand-green">{content.titleHighlight}</span>
+          <span className="whitespace-nowrap text-brand-green">{content.titleHighlight}</span>
           {content.titleLine2 ? <> {content.titleLine2}</> : null}
         </h1>
 
