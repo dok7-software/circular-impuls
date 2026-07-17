@@ -25,7 +25,7 @@ export function CtaSection({ locale, content }: CtaSectionProps) {
             <br />
             <span className="text-brand-green">{content.titleHighlight}</span>
           </h2>
-          <p className={cn(ctaType.description, "mx-auto mb-7 max-w-2xl text-[#aeb6c0] sm:mb-9")}>
+          <p className={cn(ctaType.description, "mx-auto mb-7 max-w-2xl whitespace-pre-line text-[#aeb6c0] sm:mb-9")}>
             {content.description}
           </p>
         </div>

@@ -12,7 +12,7 @@ const es = {
   },
   hero: {
     imageAlt: "Personas caminando por la ciudad",
-    badge: "Convocatoria abierta hasta el 26 de julio · Inicio 15 de septiembre",
+    badge: "INSCRIPCIONES POR ORDEN DE ENTRADA-PLAZAS LIMITADAS-INICIO 15 DE SEPTIEMBRE",
     titleLine1: "Tu modelo de negocio,",
     titleArticle: "",
     titleHighlight: "más sostenible y más rentable",
@@ -60,7 +60,7 @@ const es = {
     titleHighlight: "",
     paragraphs: [
       "Un programa que te ayuda a incorporar los principios de la economía circular en tu negocio, ya esté en marcha o todavía en fase de idea.",
-      "Combina formación especializada, mentoría experta y validación en entornos reales, para convertir tu proyecto de autoconsumo, comunidad energética o modelo circular en una iniciativa viable, sostenible y con potencial real de crecimiento.",
+      "El programa combina formación especializada, mentoría experta y validación en entornos reales para ayudarte a transformar tu proyecto de autoconsumo, comunidad energética o modelo circular en una iniciativa viable, preparada para los retos del futuro y con potencial de crecimiento.",
       "Impulsado por la Fundación Pimec, con la colaboración del Departamento de Empresa y Trabajo de la Generalitat de Catalunya, y cofinanciado por la Unión Europea.",
       "Da igual si vienes de una empresa consolidada, tienes una idea en desarrollo o lideras una spin-off vinculada al territorio: este programa es para ti.",
     ],
@@ -208,7 +208,7 @@ const es = {
     titleLine1: "Plazas",
     titleHighlight: "limitadas.",
     description:
-      "Convocatoria abierta hasta el 26 de julio. Inicio del programa el 15 de septiembre de 2026 con sesión inaugural presencial de 10 a 12h.",
+      "Inscripciones por orden de entrada\nInicio del programa: 15 de septiembre",
     form: {
       name: "Nombre",
       email: "Correo electrónico",

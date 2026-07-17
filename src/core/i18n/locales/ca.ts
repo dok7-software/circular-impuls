@@ -12,15 +12,15 @@ const ca = {
   },
   hero: {
     imageAlt: "Persones caminant per la ciutat",
-    badge: "Convocatòria oberta fins al 26 de juliol · Inici 15 de setembre",
-    titleLine1: "El teu model empresarial més sostenible:",
+    badge: "INSCRIPCIONS PER ORDRE D'ENTRADA-PLACES LÍMITADES-INICI 15 DE SETEMBRE",
+    titleLine1: "El teu model empresarial més sostenible i de futur:",
     titleArticle: "",
     titleHighlight: "Energia, Recursos i Circularitat",
     titleLine2: "",
     subtitle:
       "Tens una empresa, ets una persona emprenedora o lideres una spin-off amb un model de negoci vinculat al Pallars?",
     subtitleLine2:
-      "Aquest programa t'ajuda a fer més sostenible el teu model de negoci incorporant els principis de l'energia circular.",
+      "Aquest programa t'ajuda a desenvolupar models de negoci de futur incorporant els principis de l'economia circular",
     ctaPrimary: "Inscriu-t'hi ara",
     ctaSecondary: "Coneix-ne més",
     fundedBy: "Finançat per:",
@@ -60,7 +60,7 @@ const ca = {
     titleHighlight: "",
     paragraphs: [
       "CIRCULAR IMPULS és un programa que t'ajuda a incorporar els principis de l'economia circular al teu model de negoci, tant si està en funcionament com si es troba en una fase inicial de desenvolupament.",
-      "El programa combina formació especialitzada, mentoria experta i validació en entorns reals per ajudar-te a transformar el teu projecte d'autoconsum, comunitat energètica o model circular en una iniciativa viable, sostenible i amb potencial de creixement.",
+      "El programa combina formació especialitzada, mentoria experta i validació en entorns reals per ajudar-te a transformar el teu projecte d'autoconsum, comunitat energètica o model circular en una iniciativa viable, preparada per als reptes del futur i amb potencial de creixement.",
       "Aquesta iniciativa està impulsada per la Fundació Pimec, amb la col·laboració del Departament d'Empresa i Treball de la Generalitat de Catalunya, i cofinançada per la Unió Europea.",
       "Tant si formes part d'una empresa consolidada, com si ets una persona emprenedora amb una idea en desenvolupament o lideres una spin-off vinculada al territori, aquest programa és per a tu.",
     ],
@@ -208,7 +208,7 @@ const ca = {
     titleLine1: "Places",
     titleHighlight: "limitades.",
     description:
-      "Convocatòria oberta fins al 26 de juliol. Inici del programa el 15 de setembre de 2026 amb sessió inaugural presencial de 10 a 12h.",
+      "Inscripcions per ordre d'entrada\nInici del programa: 15 de setembre",
     form: {
       name: "Nom",
       email: "Correu electrònic",
