@@ -8,7 +8,7 @@ import { HeroCollaborators } from "@/components/landing/hero-collaborators";
 import { HeroSectionMobile } from "@/components/landing/hero-section-mobile";
 import { cn } from "@/lib/utils";
 
-const heroContentClassName = "w-full max-w-3xl md:ml-10 lg:ml-20 xl:ml-28";
+const heroContentClassName = "w-full max-w-4xl md:ml-10 lg:ml-20 xl:ml-28";
 
 type HeroSectionProps = {
   content: Dictionary["hero"];
@@ -43,11 +43,11 @@ export function HeroSection({ content, collaborators }: HeroSectionProps) {
           </div>
 
           <div className={cn(heroContentClassName, "mt-3 shrink-0 lg:mt-4")}>
-            <h1 className={cn(heroType.title, "mb-3 max-w-3xl text-white lg:mb-4")}>
-              {content.titleLine1}
+            <h1 className={cn(heroType.title, "mb-3 max-w-4xl text-white lg:mb-4")}>
+              <span className="whitespace-pre-line">{content.titleLine1}</span>
               <br />
               {content.titleArticle}
-              <span className="text-brand-green">{content.titleHighlight}</span>
+              <span className="whitespace-nowrap text-brand-green">{content.titleHighlight}</span>
               {content.titleLine2 ? <> {content.titleLine2}</> : null}
             </h1>
 

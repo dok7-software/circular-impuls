@@ -13,14 +13,14 @@ const es = {
   hero: {
     imageAlt: "Personas caminando por la ciudad",
     badge: "INSCRIPCIONES POR ORDEN DE ENTRADA-PLAZAS LIMITADAS-INICIO 15 DE SEPTIEMBRE",
-    titleLine1: "Tu modelo de negocio,",
+    titleLine1: "Tu modelo empresarial más sostenible y de futuro:",
     titleArticle: "",
-    titleHighlight: "más sostenible y más rentable",
+    titleHighlight: "Energía, Recursos y Circularidad",
     titleLine2: "",
     subtitle:
       "¿Tienes una empresa, eres emprendedor o emprendedora, o lideras una spin-off con actividad en el Pallars?",
     subtitleLine2:
-      "Este programa te ayuda a integrar la energía circular en tu modelo de negocio — y a hacerlo rentable.",
+      "Este programa te ayuda a desarrollar modelos de negocio de futuro incorporando los principios de la economía circular",
     ctaPrimary: "Inscríbete",
     ctaSecondary: "Conoce más",
     fundedBy: "Financiado por:",
