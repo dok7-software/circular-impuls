@@ -99,7 +99,7 @@ const ca = {
       },
       {
         icon: "leaf",
-        title: "Sostenibilitat",
+        title: "Models Sostenibles",
         subtitle: "Competitivitat i medi ambient",
         bullets: [
           {

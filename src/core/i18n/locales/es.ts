@@ -99,7 +99,7 @@ const es = {
       },
       {
         icon: "leaf",
-        title: "Sostenibilidad",
+        title: "Modelos Sostenibles",
         subtitle: "Competitividad y medioambiente",
         bullets: [
           {
