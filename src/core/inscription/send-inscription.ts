@@ -8,6 +8,7 @@ const NOTIFY_EMAILS = [
   "info@circularimpuls.cat",
   "montse@phimistersbschool.com",
   "growth@phimistersbschool.com",
+  "yemag@phimistersbschool.com",
   "secretaria@fundaciopimec.org",
   "martaamoros@fundaciopimec.org",
   "juliagomez@fundaciopimec.org",
