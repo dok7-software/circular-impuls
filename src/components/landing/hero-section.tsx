@@ -67,7 +67,7 @@ export function HeroSection({ content, collaborators }: HeroSectionProps) {
 
         <Container variant="tight" className="relative z-10 mt-auto shrink-0 pb-4 lg:pb-6">
           <div className="flex flex-wrap items-end justify-between gap-5 lg:gap-8">
-            <HeroCollaborators content={collaborators} />
+            <HeroCollaborators content={collaborators} className="md:ml-10 lg:ml-20 xl:ml-28" />
 
             <div className="flex flex-wrap items-end justify-end gap-5 lg:gap-8">
               <div className="text-left">
@@ -82,7 +82,7 @@ export function HeroSection({ content, collaborators }: HeroSectionProps) {
                 <p className={cn(heroType.fundedBy, "mb-2.5 text-[#c4ccd5]")}>
                   {content.fundedBy}
                 </p>
-                <div className="flex flex-col items-start gap-3">
+                <div className="flex flex-wrap items-center gap-4 sm:gap-5">
                   <HeroPartnerLogo
                     src={content.fseLogo.src}
                     alt={content.fseLogo.alt}
@@ -92,24 +92,6 @@ export function HeroSection({ content, collaborators }: HeroSectionProps) {
                     src={content.generalitatLogo.src}
                     alt={content.generalitatLogo.alt}
                     className="h-[48px] max-w-[211px] sm:h-[52px]"
-                  />
-                </div>
-              </div>
-
-              <div className="text-left">
-                <p className={cn(heroType.programBy, "mb-2.5 text-[#c4ccd5]")}>
-                  {content.programBy}
-                </p>
-                <div className="flex flex-col items-start gap-2">
-                  <HeroPartnerLogo
-                    src={content.programaPrimerLogo.src}
-                    alt={content.programaPrimerLogo.alt}
-                    className="h-8 max-w-[140px]"
-                  />
-                  <HeroPartnerLogo
-                    src={content.xeLogo.src}
-                    alt={content.xeLogo.alt}
-                    className="h-8 max-w-[140px]"
                   />
                 </div>
               </div>

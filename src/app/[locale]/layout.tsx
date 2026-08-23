@@ -43,6 +43,8 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
           locale={locale as Locale}
           brand={dict.brand}
           pimecLogo={dict.hero.pimecLogo}
+          programaPrimerLogo={dict.hero.programaPrimerLogo}
+          xeLogo={dict.hero.xeLogo}
           nav={dict.nav}
         />
         {children}
