@@ -99,7 +99,7 @@ const ca = {
       },
       {
         icon: "leaf",
-        title: "Sostenibilitat",
+        title: "Models Sostenibles",
         subtitle: "Competitivitat i medi ambient",
         bullets: [
           {
@@ -187,7 +187,6 @@ const ca = {
       { value: "100", unit: "h", label: "de mentoria individualitzada" },
     ],
     badges: [
-      "Visites tècniques sectorials",
       "Accés a experts i xarxa d'agents del territori",
       "Presentació final davant inversors i agents clau",
     ],

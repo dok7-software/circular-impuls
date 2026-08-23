@@ -99,7 +99,7 @@ const es = {
       },
       {
         icon: "leaf",
-        title: "Sostenibilidad",
+        title: "Modelos Sostenibles",
         subtitle: "Competitividad y medioambiente",
         bullets: [
           {
@@ -187,7 +187,6 @@ const es = {
       { value: "100", unit: "h", label: "de mentoría individualizada" },
     ],
     badges: [
-      "Visitas técnicas sectoriales",
       "Acceso a expertos y red de agentes del territorio",
       "Presentación final ante inversores y agentes clave",
     ],
