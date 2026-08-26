@@ -42,8 +42,8 @@ export function HeroSectionMobile({ content, collaborators }: HeroSectionMobileP
 
       <Container variant="tight" className="shrink-0 space-y-4 pb-5 pt-6">
         <div className="border-t border-white/12 pt-4">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-6">
-            <div className="min-w-0 flex-1">
+          <div className="flex flex-col gap-4">
+            <div className="min-w-0">
               <p
                 className={cn(
                   heroType.fundingNote,
@@ -53,7 +53,7 @@ export function HeroSectionMobile({ content, collaborators }: HeroSectionMobileP
                 {content.fundingNote}
               </p>
               <p className={cn(heroType.fundedBy, "mb-2 text-[#c4ccd5]")}>{content.fundedBy}</p>
-              <div className="flex flex-col items-start gap-2">
+              <div className="flex flex-wrap items-center gap-3">
                 <HeroPartnerLogo
                   src={content.fseLogo.src}
                   alt={content.fseLogo.alt}
@@ -63,22 +63,6 @@ export function HeroSectionMobile({ content, collaborators }: HeroSectionMobileP
                   src={content.generalitatLogo.src}
                   alt={content.generalitatLogo.alt}
                   className="h-[33px] max-w-[154px]"
-                />
-              </div>
-            </div>
-
-            <div className="shrink-0">
-              <p className={cn(heroType.programBy, "mb-2 text-[#c4ccd5]")}>{content.programBy}</p>
-              <div className="flex flex-col items-start gap-2">
-                <HeroPartnerLogo
-                  src={content.programaPrimerLogo.src}
-                  alt={content.programaPrimerLogo.alt}
-                  className="h-7 max-w-28"
-                />
-                <HeroPartnerLogo
-                  src={content.xeLogo.src}
-                  alt={content.xeLogo.alt}
-                  className="h-7 max-w-28"
                 />
               </div>
             </div>

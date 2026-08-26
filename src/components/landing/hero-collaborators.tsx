@@ -10,7 +10,7 @@ type HeroCollaboratorsProps = {
 
 export function HeroCollaborators({ content, className }: HeroCollaboratorsProps) {
   return (
-    <div className={cn("flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-5 lg:gap-6", className)}>
+    <div className={cn("flex flex-col items-start gap-3", className)}>
       <p className={cn(heroType.fundedBy, "shrink-0 text-[#c4ccd5]")}>{content.title}</p>
       <div className="flex flex-wrap items-center gap-4 sm:gap-5 lg:gap-6">
         <HeroPartnerLogo

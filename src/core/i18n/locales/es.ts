@@ -25,11 +25,11 @@ const es = {
     ctaSecondary: "Conoce más",
     fundedBy: "Financiado por:",
     fseLogo: {
-      src: "/images/logo-union-europea.png",
+      src: "/images/logo_UE_new.png",
       alt: "Cofinanciado por la Unión Europea",
     },
     generalitatLogo: {
-      src: "/images/logo-generalitat.png",
+      src: "/images/logo_generaliltat_new.jpg",
       alt: "Generalitat de Catalunya",
     },
     fundingNote:
@@ -40,11 +40,11 @@ const es = {
       alt: "Fundación pimec",
     },
     xeLogo: {
-      src: "/images/logo_xe.png",
+      src: "/images/logo_XE_new.png",
       alt: "XE",
     },
     programaPrimerLogo: {
-      src: "/images/logo_programa_primer.png",
+      src: "/images/logo_programa_primer_new.png",
       alt: "Programa Primer",
     },
     stats: [

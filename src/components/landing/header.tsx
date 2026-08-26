@@ -15,10 +15,19 @@ type LandingHeaderProps = {
   locale: Locale;
   brand: string;
   pimecLogo: Dictionary["hero"]["pimecLogo"];
+  programaPrimerLogo: Dictionary["hero"]["programaPrimerLogo"];
+  xeLogo: Dictionary["hero"]["xeLogo"];
   nav: Dictionary["nav"];
 };
 
-export function LandingHeader({ locale, brand, pimecLogo, nav }: LandingHeaderProps) {
+export function LandingHeader({
+  locale,
+  brand,
+  pimecLogo,
+  programaPrimerLogo,
+  xeLogo,
+  nav,
+}: LandingHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -54,7 +63,23 @@ export function LandingHeader({ locale, brand, pimecLogo, nav }: LandingHeaderPr
             </Link>
 
             {/* Desktop nav */}
-            <div className="hidden shrink-0 items-center gap-8 sm:flex">
+            <div className="hidden shrink-0 items-center gap-6 sm:flex">
+              <div className="flex items-center gap-4 border-r border-white/10 pr-6">
+                <Image
+                  src={programaPrimerLogo.src}
+                  alt={programaPrimerLogo.alt}
+                  width={140}
+                  height={32}
+                  className="h-7 w-auto max-w-[120px] object-contain"
+                />
+                <Image
+                  src={xeLogo.src}
+                  alt={xeLogo.alt}
+                  width={140}
+                  height={32}
+                  className="h-7 w-auto max-w-[120px] object-contain"
+                />
+              </div>
               <LocaleSwitcher locale={locale} />
               <ButtonLink href="#contacte" className={cn(sharedType.buttonSm, "px-6 py-3 text-sm")}>
                 {nav.cta}
@@ -100,6 +125,22 @@ export function LandingHeader({ locale, brand, pimecLogo, nav }: LandingHeaderPr
         )}
       >
         <div className="flex flex-1 flex-col items-center justify-center gap-10 px-6">
+          <div className="flex items-center justify-center gap-6">
+            <Image
+              src={programaPrimerLogo.src}
+              alt={programaPrimerLogo.alt}
+              width={160}
+              height={40}
+              className="h-8 w-auto max-w-[140px] object-contain"
+            />
+            <Image
+              src={xeLogo.src}
+              alt={xeLogo.alt}
+              width={160}
+              height={40}
+              className="h-8 w-auto max-w-[140px] object-contain"
+            />
+          </div>
           <LocaleSwitcher locale={locale} />
           <ButtonLink
             href="#contacte"
