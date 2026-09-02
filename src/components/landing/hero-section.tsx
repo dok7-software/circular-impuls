@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { INSCRIPTIONS_CLOSED } from "@/core/inscription/config";
 import type { Dictionary } from "@/core/i18n/types";
 import { heroType } from "@/core/typography";
 import { ButtonLink } from "@/components/landing/button-link";
@@ -35,10 +36,10 @@ export function HeroSection({ content, collaborators }: HeroSectionProps) {
           variant="tight"
           className="relative z-10 flex shrink-0 flex-col py-6 pt-20 lg:py-8 lg:pt-24"
         >
-          <div className={cn(heroContentClassName, "shrink-0")}>
-            <div className="ml-12 inline-flex w-fit items-center gap-2.5 rounded-full border border-brand-green/55 bg-[rgba(8,11,15,.35)] px-5 py-2.5">
-              <span className="h-2 w-2 rounded-full bg-brand-green shadow-[0_0_10px_#17d479]" />
-              <span className={cn(heroType.badge, "text-[#cfe9d9]")}>{content.badge}</span>
+          <div className={cn(heroContentClassName, "flex shrink-0 justify-center")}>
+            <div className="inline-flex w-fit items-center gap-2.5 rounded-full border border-amber-400/70 bg-amber-500/15 px-5 py-2.5">
+              <span className="h-2 w-2 rounded-full bg-amber-400 shadow-[0_0_10px_#fbbf24]" />
+              <span className={cn(heroType.badge, "text-amber-200")}>{content.badge}</span>
             </div>
           </div>
 
@@ -59,8 +60,8 @@ export function HeroSection({ content, collaborators }: HeroSectionProps) {
               {content.subtitleLine2}
             </p>
 
-            <ButtonLink href="#contacte" variant="secondary">
-              {content.ctaPrimary}
+            <ButtonLink href="#contacte" variant="secondary" disabled={INSCRIPTIONS_CLOSED}>
+              {INSCRIPTIONS_CLOSED ? content.ctaPrimaryClosed : content.ctaPrimary}
             </ButtonLink>
           </div>
         </Container>

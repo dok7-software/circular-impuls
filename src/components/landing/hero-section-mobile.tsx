@@ -1,3 +1,4 @@
+import { INSCRIPTIONS_CLOSED } from "@/core/inscription/config";
 import type { Dictionary } from "@/core/i18n/types";
 import { heroType } from "@/core/typography";
 import { ButtonLink } from "@/components/landing/button-link";
@@ -15,9 +16,11 @@ export function HeroSectionMobile({ content, collaborators }: HeroSectionMobileP
   return (
     <div className="relative z-10 flex flex-col sm:hidden">
       <Container variant="tight" className="flex flex-col pt-16 pb-4">
-        <div className="my-6 inline-flex w-fit items-center gap-2 rounded-full border border-brand-green/55 bg-[rgba(8,11,15,.35)] px-3.5 py-1.5">
-          <span className="h-1.5 w-1.5 rounded-full bg-brand-green shadow-[0_0_10px_#17d479]" />
-          <span className={cn(heroType.badge, "text-[#cfe9d9]")}>{content.badge}</span>
+        <div className="flex max-w-xl justify-center">
+          <div className="my-6 inline-flex w-fit items-center gap-2 rounded-full border border-amber-400/70 bg-amber-500/15 px-3.5 py-1.5">
+            <span className="h-1.5 w-1.5 rounded-full bg-amber-400 shadow-[0_0_10px_#fbbf24]" />
+            <span className={cn(heroType.badge, "text-amber-200")}>{content.badge}</span>
+          </div>
         </div>
 
         <h1 className={cn(heroType.title, "mt-4 mb-2 max-w-xl text-white")}>
@@ -35,8 +38,13 @@ export function HeroSectionMobile({ content, collaborators }: HeroSectionMobileP
           {content.subtitleLine2}
         </p>
 
-        <ButtonLink href="#contacte" variant="secondary" className="w-full justify-center">
-          {content.ctaPrimary}
+        <ButtonLink
+          href="#contacte"
+          variant="secondary"
+          className="w-full justify-center"
+          disabled={INSCRIPTIONS_CLOSED}
+        >
+          {INSCRIPTIONS_CLOSED ? content.ctaPrimaryClosed : content.ctaPrimary}
         </ButtonLink>
       </Container>
 

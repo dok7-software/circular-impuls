@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { INSCRIPTIONS_CLOSED } from "@/core/inscription/config";
 import type { Locale } from "@/core/i18n/config";
 import type { Dictionary } from "@/core/i18n/types";
 import { ctaType } from "@/core/typography";
@@ -23,6 +24,8 @@ export function InscriptionForm({ locale, form }: InscriptionFormProps) {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (INSCRIPTIONS_CLOSED) return;
+
     setStatus("submitting");
 
     const form = event.currentTarget;
@@ -63,6 +66,7 @@ export function InscriptionForm({ locale, form }: InscriptionFormProps) {
       className="mx-auto w-full max-w-xl text-left"
       noValidate
     >
+      <fieldset disabled={INSCRIPTIONS_CLOSED} className={cn(INSCRIPTIONS_CLOSED && "opacity-60")}>
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block sm:col-span-2">
           <span className={cn(ctaType.formLabel, "mb-1.5 block text-[#c4ccd5]")}>
@@ -170,17 +174,25 @@ export function InscriptionForm({ locale, form }: InscriptionFormProps) {
         />
         <span className={cn(ctaType.formConsent, "text-[#aeb6c0]")}>{form.consent}</span>
       </label>
+      </fieldset>
 
       <div className="mt-6 flex justify-center">
       <button
         type="submit"
-        disabled={status === "submitting" || status === "success"}
+        disabled={INSCRIPTIONS_CLOSED || status === "submitting" || status === "success"}
         className={cn(
           ctaType.formSubmit,
-          "w-full rounded-full bg-brand-green px-10 py-4 text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto",
+          "w-full rounded-full px-10 py-4 text-white transition-opacity sm:w-auto",
+          INSCRIPTIONS_CLOSED
+            ? "cursor-not-allowed bg-[#4a5561] text-[#aeb6c0]"
+            : "bg-brand-green hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60",
         )}
       >
-        {status === "submitting" ? form.submitting : form.submit}
+        {INSCRIPTIONS_CLOSED
+          ? form.submitClosed
+          : status === "submitting"
+            ? form.submitting
+            : form.submit}
       </button>
       </div>
 

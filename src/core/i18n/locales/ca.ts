@@ -9,10 +9,11 @@ const ca = {
   brand: "CIRCULAR IMPULS",
   nav: {
     cta: "Inscriu-t'hi",
+    ctaClosed: "Inscripcions tancades",
   },
   hero: {
     imageAlt: "Persones caminant per la ciutat",
-    badge: "INSCRIPCIONS PER ORDRE D'ENTRADA-PLACES LÍMITADES-INICI 15 DE SETEMBRE",
+    badge: "INSCRIPCIONS TANCADES",
     titleLine1: "El teu model empresarial sostenible de futur",
     titleArticle: "",
     titleHighlight: "Energia, Recursos i Circularitat",
@@ -22,6 +23,7 @@ const ca = {
     subtitleLine2:
       "Aquest programa t'ajuda a desenvolupar models de negoci de futur incorporant els principis de l'economia circular",
     ctaPrimary: "Inscriu-t'hi ara",
+    ctaPrimaryClosed: "Inscripcions tancades",
     ctaSecondary: "Coneix-ne més",
     fundedBy: "Finançat per:",
     fseLogo: {
@@ -220,6 +222,7 @@ const ca = {
       consent:
         "Accepto que les meves dades es tractin per gestionar la meva inscripció al programa, d'acord amb la política de privacitat.",
       submit: "Inscriu-t'hi →",
+      submitClosed: "Inscripcions tancades",
       submitting: "Enviant...",
       success: "Inscripció enviada. Ens posarem en contacte aviat.",
       error: "No s'ha pogut enviar. Torna-ho a provar més tard.",

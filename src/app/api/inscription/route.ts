@@ -1,8 +1,13 @@
 import { NextResponse } from "next/server";
+import { INSCRIPTIONS_CLOSED } from "@/core/inscription/config";
 import { inscriptionSchema } from "@/core/inscription/schema";
 import { sendInscription } from "@/core/inscription/send-inscription";
 
 export async function POST(request: Request) {
+  if (INSCRIPTIONS_CLOSED) {
+    return NextResponse.json({ error: "closed" }, { status: 403 });
+  }
+
   let body: unknown;
 
   try {
