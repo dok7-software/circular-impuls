@@ -10,6 +10,7 @@ export type Dictionary = {
   brand: string;
   nav: {
     cta: string;
+    ctaClosed: string;
   };
   hero: {
     imageAlt: string;
@@ -21,6 +22,7 @@ export type Dictionary = {
     subtitle: string;
     subtitleLine2: string;
     ctaPrimary: string;
+    ctaPrimaryClosed: string;
     ctaSecondary: string;
     fundedBy: string;
     fseLogo: { src: string; alt: string };
@@ -100,6 +102,7 @@ export type Dictionary = {
       sector: string;
       consent: string;
       submit: string;
+      submitClosed: string;
       submitting: string;
       success: string;
       error: string;

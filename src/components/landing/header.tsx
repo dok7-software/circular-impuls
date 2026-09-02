@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { INSCRIPTIONS_CLOSED } from "@/core/inscription/config";
 import type { Locale } from "@/core/i18n/config";
 import type { Dictionary } from "@/core/i18n/types";
 import { sharedType } from "@/core/typography";
@@ -81,8 +82,12 @@ export function LandingHeader({
                 />
               </div>
               <LocaleSwitcher locale={locale} />
-              <ButtonLink href="#contacte" className={cn(sharedType.buttonSm, "px-6 py-3 text-sm")}>
-                {nav.cta}
+              <ButtonLink
+                href="#contacte"
+                className={cn(sharedType.buttonSm, "px-6 py-3 text-sm")}
+                disabled={INSCRIPTIONS_CLOSED}
+              >
+                {INSCRIPTIONS_CLOSED ? nav.ctaClosed : nav.cta}
               </ButtonLink>
             </div>
 
@@ -146,8 +151,9 @@ export function LandingHeader({
             href="#contacte"
             className={cn(sharedType.button, "w-full max-w-xs px-8 py-4 text-center text-base")}
             onClick={() => setMenuOpen(false)}
+            disabled={INSCRIPTIONS_CLOSED}
           >
-            {nav.cta}
+            {INSCRIPTIONS_CLOSED ? nav.ctaClosed : nav.cta}
           </ButtonLink>
         </div>
       </div>

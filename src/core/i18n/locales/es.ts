@@ -9,10 +9,11 @@ const es = {
   brand: "CIRCULAR IMPULS",
   nav: {
     cta: "Inscríbete",
+    ctaClosed: "Inscripciones cerradas",
   },
   hero: {
     imageAlt: "Personas caminando por la ciudad",
-    badge: "INSCRIPCIONES POR ORDEN DE ENTRADA-PLAZAS LIMITADAS-INICIO 15 DE SEPTIEMBRE",
+    badge: "INSCRIPCIONES CERRADAS",
     titleLine1: "Tu modelo empresarial sostenible de futuro",
     titleArticle: "",
     titleHighlight: "Energía, Recursos y Circularidad",
@@ -22,6 +23,7 @@ const es = {
     subtitleLine2:
       "Este programa te ayuda a desarrollar modelos de negocio de futuro incorporando los principios de la economía circular",
     ctaPrimary: "Inscríbete",
+    ctaPrimaryClosed: "Inscripciones cerradas",
     ctaSecondary: "Conoce más",
     fundedBy: "Financiado por:",
     fseLogo: {
@@ -220,6 +222,7 @@ const es = {
       consent:
         "Acepto que mis datos se traten para gestionar mi inscripción al programa, de acuerdo con la política de privacidad.",
       submit: "Inscríbete →",
+      submitClosed: "Inscripciones cerradas",
       submitting: "Enviando...",
       success: "Inscripción enviada. Nos pondremos en contacto pronto.",
       error: "No se ha podido enviar. Inténtalo de nuevo más tarde.",
